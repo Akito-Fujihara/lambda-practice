@@ -20,7 +20,7 @@ pyminizip.compress(filename, zipname, 'mypassword', 0)
 
 obj = s3.Object('examplewrite20210202', filename+".zip")
 response = obj.put(
-    Body=open(zipname), 'rb'
+    Body=open(zipname, 'rb')
 )
 
 tmpdir.cleanup()
